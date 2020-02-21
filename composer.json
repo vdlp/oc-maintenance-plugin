@@ -1,0 +1,22 @@
+{
+    "name": "vdlp/oc-maintenance-plugin",
+    "type": "october-plugin",
+    "description": "Maintenance page plugin",
+    "keywords": [
+        "october",
+        "octobercms",
+        "cms",
+        "maintenance",
+        "503"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Van der Let & Partners",
+            "email": "octobercms@vdlp.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    }
+}
