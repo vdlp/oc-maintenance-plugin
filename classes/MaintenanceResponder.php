@@ -58,6 +58,13 @@ final class MaintenanceResponder implements ResponseMaker
     public function getResponse(): Response
     {
         if ($this->request->ajax()) {
+            if ($this->request->hasHeader('X-OCTOBER-REQUEST-HANDLER')) {
+                return $this->responseFactory->make(
+                    $this->translator->trans('vdlp.maintenance::lang.responses.ajax.message'),
+                    self::HTTP_STATUS_CODE
+                );
+            }
+
             return $this->responseFactory->json([
                 'error' => $this->translator->trans('vdlp.maintenance::lang.responses.ajax.message'),
             ], self::HTTP_STATUS_CODE);
