@@ -9,11 +9,11 @@ return [
     ],
     'responses' => [
         'ajax' => [
-            'message' => 'Er wordt momenteel onderhoud gepleegd aan deze website, probeer straks nogmaals.',
+            'message' => 'Sorry, we zijn momenteel niet bereikbaar wegens onderhoud. We verwachten snel weer terug te zijn. Bedankt voor uw geduld.',
         ],
         'view' => [
-            'title' => 'Er wordt momenteel onderhoud gepleegd aan deze website',
-            'message' => 'Er wordt momenteel onderhoud gepleegd aan deze website, probeer straks nogmaals.',
+            'title' => 'Sorry, we zijn momenteel niet bereikbaar wegens onderhoud.',
+            'message' => 'We verwachten snel weer terug te zijn. Bedankt voor uw geduld.',
         ],
     ],
 ];

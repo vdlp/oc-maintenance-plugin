@@ -1,52 +1,77 @@
+{% apply spaceless %}
 <!DOCTYPE html>
 <html lang="{{ locale }}">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8">
+    <meta http-equiv="language" content="{{ locale }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ 'vdlp.maintenance::lang.responses.view.title'|trans }} | {{ app_name }}</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    <!-- Styles -->
+    <title>{{ 'vdlp.maintenance::lang.responses.view.title'|trans }} {{ 'vdlp.maintenance::lang.responses.view.message'|trans }} | {{ app_name }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700&display=swap" rel="stylesheet">
     <style>
         html, body {
             background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
+            color: #3a3a3a;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 400;
             height: 100vh;
             margin: 0;
         }
-        .full-height {
+
+        .wrapper {
             height: 100vh;
-        }
-        .flex-center {
             align-items: center;
             display: flex;
             justify-content: center;
-        }
-        .position-ref {
             position: relative;
         }
+
         .content {
             text-align: center;
+            padding: 20px;
         }
+
         .title {
-            font-size: 48px;
-            width: 60%;
             margin: 0 auto;
+            line-height: 1.1;
+            font-weight: 700;
+            color: #a1a1a1;
+            font-size: 18px;
+        }
+
+        .message {
+            margin: 20px auto 0;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .title {
+                width: 75%;
+                font-size: 3vw;
+            }
+
+            .message {
+                width: 75%;
+                font-size: 1.5vw;
+            }
         }
     </style>
 </head>
-<body>
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <div class="title m-b-md">
-            {{ 'vdlp.maintenance::lang.responses.view.message'|trans }}
+<body ontouchstart="" class="layout-maintenance">
+    <div class="wrapper">
+        <div class="content">
+            <div class="title">
+                {{- 'vdlp.maintenance::lang.responses.view.title'|trans -}}
+            </div>
+            <div class="message">
+                {{- 'vdlp.maintenance::lang.responses.view.message'|trans -}}
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>
+{% endapply %}

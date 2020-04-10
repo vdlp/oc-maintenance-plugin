@@ -9,11 +9,11 @@ return [
     ],
     'responses' => [
         'ajax' => [
-            'message' => 'The application is down for maintenance, please try again later.',
+            'message' => 'Sorry, we’re currently down for maintenance. We expect to be back soon. Thanks for your patience.',
         ],
         'view' => [
-            'title' => 'This application is down for maintenance',
-            'message' => 'The application is down for maintenance, please try again later.',
+            'title' => 'Sorry, we’re currently down for maintenance.',
+            'message' => 'We expect to be back soon. Thank you for your patience.',
         ],
     ],
 ];
