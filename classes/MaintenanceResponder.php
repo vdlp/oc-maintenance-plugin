@@ -16,30 +16,11 @@ final class MaintenanceResponder implements ResponseMaker
 {
     public const HTTP_STATUS_CODE = 503;
 
-    /**
-     * @var Request
-     */
-    private $request;
-
-    /**
-     * @var ResponseFactory
-     */
-    private $responseFactory;
-
-    /**
-     * @var Translator
-     */
-    private $translator;
-
-    /**
-     * @var ViewFactory
-     */
-    private $view;
-
-    /**
-     * @var Repository
-     */
-    private $config;
+    private Request $request;
+    private ResponseFactory $responseFactory;
+    private Translator $translator;
+    private ViewFactory $view;
+    private Repository $config;
 
     public function __construct(
         Request $request,

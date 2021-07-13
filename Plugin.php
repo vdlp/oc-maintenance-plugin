@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace Vdlp\Maintenance;
 
 use System\Classes\PluginBase;
-use Vdlp\Maintenance\Providers\MaintenanceServiceProvider;
 
-class Plugin extends PluginBase
+final class Plugin extends PluginBase
 {
     public function pluginDetails(): array
     {
@@ -21,6 +20,6 @@ class Plugin extends PluginBase
 
     public function register(): void
     {
-        $this->app->register(MaintenanceServiceProvider::class);
+        $this->app->register(ServiceProvider::class);
     }
 }
