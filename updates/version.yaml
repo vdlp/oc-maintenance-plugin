@@ -1,5 +1,6 @@
-1.0.0: Initial version of the VDLP Maintenance plugin
-1.1.0: Change response of AJAX requests to text instead of JSON if X-OCTOBER-REQUEST-HANDLER header is present
-1.2.0: Optimize layout and translation of the default 503 page
-1.2.1: Fix title of the default 503 page
-1.2.2: Update plugin dependencies
+1.0.0: "Initial version of the VDLP Maintenance plugin"
+1.1.0: "Change response of AJAX requests to text instead of JSON if X-OCTOBER-REQUEST-HANDLER header is present"
+1.2.0: "Optimize layout and translation of the default 503 page"
+1.2.1: "Fix title of the default 503 page"
+1.2.2: "Update plugin dependencies"
+2.0.0: "Add support for PHP 7.4 and higher"

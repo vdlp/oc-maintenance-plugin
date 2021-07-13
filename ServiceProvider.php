@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Vdlp\Maintenance\Providers;
+namespace Vdlp\Maintenance;
 
 use Illuminate\Foundation\Application;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as ServiceProviderBase;
 use Vdlp\Maintenance\Classes\MaintenanceResponder;
 use Vdlp\Maintenance\Contracts\ResponseMaker;
 
-final class MaintenanceServiceProvider extends ServiceProvider
+final class ServiceProvider extends ServiceProviderBase
 {
     public function register(): void
     {
@@ -20,12 +20,13 @@ final class MaintenanceServiceProvider extends ServiceProvider
 
     protected function registerMaintenanceHandler(): void
     {
-        $this->app->booting(static function (Application $app) {
+        $this->app->booting(static function (Application $app): void {
             if ($app->isDownForMaintenance() && !$app->runningInConsole()) {
                 /** @var ResponseMaker $responder */
                 $responder = $app->make(ResponseMaker::class);
                 $responder->getResponse()->send();
-                exit;
+
+                exit(0);
             }
         });
     }

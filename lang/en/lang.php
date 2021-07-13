@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 return [
     'plugin' => [
-        'name' => 'VDLP Maintenance Plugin',
-        'description' => 'Plugin for the maintenance page',
+        'name' => 'Maintenance',
+        'description' => 'Provides a fully customizable maintenance page.',
     ],
     'responses' => [
         'ajax' => [
