@@ -4,3 +4,4 @@
 1.2.1: "Fix title of the default 503 page"
 1.2.2: "Update plugin dependencies"
 2.0.0: "Add support for PHP 7.4 and higher"
+2.1.0: "Minor code improvements (see CHANGELOG.md)"
