@@ -34,6 +34,14 @@ php artisan up
 composer require vdlp/oc-maintenance-plugin
 ```
 
+## Configuration
+
+To configure this plugin execute the following command:
+
+```
+php artisan vendor:publish --provider="Vdlp\Maintenance\ServiceProviders\MaintenanceServiceProvider" --tag="config"
+```
+
 ## Customization
 
 This plugin is shipped with a default maintenance page.

@@ -51,6 +51,10 @@ final class MaintenanceResponder implements ResponseMaker
             ], self::HTTP_STATUS_CODE);
         }
 
+        if (config('vdlp_maintenance.use_preferred_locale') === true) {
+            $this->translator->setLocale($this->request->getPreferredLanguage());
+        }
+
         $view = $this->view->file($this->getMaintenancePagePath(), [
             'locale' => $this->translator->getLocale(),
             'app_name' => $this->config->get('app.name'),
