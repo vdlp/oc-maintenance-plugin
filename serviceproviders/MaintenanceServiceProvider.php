@@ -11,6 +11,15 @@ use Vdlp\Maintenance\Contracts\ResponseMaker;
 
 final class MaintenanceServiceProvider extends ServiceProvider
 {
+    public function boot(): void
+    {
+        $this->publishes([
+            __DIR__ . '/../config.php' => config_path('vdlp_maintenance.php'),
+        ], 'config');
+
+        $this->mergeConfigFrom(__DIR__ . '/../config.php', 'vdlp_maintenance');
+    }
+
     public function register(): void
     {
         $this->app->bind(ResponseMaker::class, MaintenanceResponder::class);
