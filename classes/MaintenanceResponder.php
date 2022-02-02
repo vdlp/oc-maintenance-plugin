@@ -10,7 +10,7 @@ use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Vdlp\Maintenance\Contracts\ResponseMaker;
+use Vdlp\Maintenance\Classes\Contracts\ResponseMaker;
 
 final class MaintenanceResponder implements ResponseMaker
 {
