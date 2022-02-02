@@ -22,6 +22,7 @@
     },
     "archive": {
         "exclude": [
+            ".gitattributes",
             ".gitignore",
             ".github"
         ]
