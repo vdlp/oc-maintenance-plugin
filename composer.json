@@ -23,8 +23,8 @@
     "archive": {
         "exclude": [
             ".gitattributes",
-            ".gitignore",
-            ".github"
+            ".github",
+            ".gitignore"
         ]
     }
 }
