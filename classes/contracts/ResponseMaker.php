@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vdlp\Maintenance\Contracts;
+namespace Vdlp\Maintenance\Classes\Contracts;
 
 use Symfony\Component\HttpFoundation\Response;
 
