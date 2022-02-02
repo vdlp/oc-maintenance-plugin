@@ -23,8 +23,7 @@
     "archive": {
         "exclude": [
             ".gitignore",
-            ".github",
-            ".idea/"
+            ".github"
         ]
     }
 }
