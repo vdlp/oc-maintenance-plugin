@@ -16,14 +16,34 @@
             "email": "octobercms@vdlp.nl"
         }
     ],
-    "require": {
-        "php": "^7.4 || ^8.0",
-        "composer/installers": "^1.0"
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     },
+    "homepage": "https://vdlp.nl",
+    "support": {
+        "email": "octobercms@vdlp.nl"
+    },
+    "require": {
+        "php": "^8.0",
+        "composer/installers": "^1.0 || ^2.0",
+        "october/rain": "^3.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://gateway.octobercms.com",
+            "only": [
+                "october/rain"
+            ]
+        }
+    ],
     "archive": {
         "exclude": [
-            ".gitignore",
-            ".github"
+            ".gitattributes",
+            ".github",
+            ".gitignore"
         ]
     }
 }

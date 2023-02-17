@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Vdlp\Maintenance;
 
 use System\Classes\PluginBase;
-use Vdlp\Maintenance\ServiceProviders\MaintenanceServiceProvider;
+use Vdlp\Maintenance\Providers\MaintenanceServiceProvider;
 
 final class Plugin extends PluginBase
 {
