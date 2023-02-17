@@ -39,7 +39,7 @@ composer require vdlp/oc-maintenance-plugin
 To configure this plugin execute the following command:
 
 ```
-php artisan vendor:publish --provider="Vdlp\Maintenance\ServiceProviders\MaintenanceServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Vdlp\Maintenance\Providers\MaintenanceServiceProvider" --tag="config"
 ```
 
 ## Customization
