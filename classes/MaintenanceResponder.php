@@ -27,7 +27,7 @@ final class MaintenanceResponder implements ResponseMaker
         ResponseFactory $responseFactory,
         Translator $translator,
         ViewFactory $view,
-        Repository $config
+        Repository $config,
     ) {
         $this->request = $request;
         $this->responseFactory = $responseFactory;
