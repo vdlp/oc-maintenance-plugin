@@ -38,12 +38,5 @@
                 "october/rain"
             ]
         }
-    ],
-    "archive": {
-        "exclude": [
-            ".gitattributes",
-            ".github",
-            ".gitignore"
-        ]
-    }
+    ]
 }
