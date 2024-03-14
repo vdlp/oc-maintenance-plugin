@@ -42,13 +42,13 @@ final class MaintenanceResponder implements ResponseMaker
             if ($this->request->hasHeader('X-OCTOBER-REQUEST-HANDLER')) {
                 return $this->responseFactory->make(
                     $this->translator->trans('vdlp.maintenance::lang.responses.ajax.message'),
-                    self::HTTP_STATUS_CODE
+                    config('vdlp_maintenance.http_status_code_ajax', self::HTTP_STATUS_CODE)
                 );
             }
 
             return $this->responseFactory->json([
                 'error' => $this->translator->trans('vdlp.maintenance::lang.responses.ajax.message'),
-            ], self::HTTP_STATUS_CODE);
+            ], config('vdlp_maintenance.http_status_code', self::HTTP_STATUS_CODE));
         }
 
         if (config('vdlp_maintenance.use_preferred_locale') === true) {
