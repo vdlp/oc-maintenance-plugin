@@ -38,4 +38,16 @@ return [
 
     'http_status_code_ajax' => 503,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Whitelisted IP addresses during maintenance mode
+    |--------------------------------------------------------------------------
+    |
+    | Configure a list of IP addresses that are allowed to access the site
+    | during maintenance mode. Separate multiple IP addresses with a comma.
+    |
+    */
+
+    'whitelisted_ips' => env('MAINTENANCE_WHITELIST_IPS', ''),
+
 ];

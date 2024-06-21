@@ -28,6 +28,14 @@ To bring October CMS up:
 php artisan up
 ```
 
+To bring October CMS down with whitelist-based bypass:
+
+```
+php artisan down --secret="{secret_string}"
+```
+
+This will make the system available for all requests coming from the IP addresses listed in the `whitelisted_ips` configuration option when the request path equals the secret string.
+
 ## Installation
 
 ```

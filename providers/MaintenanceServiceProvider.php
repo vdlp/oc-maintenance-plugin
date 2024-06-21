@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Vdlp\Maintenance\Providers;
 
+use Config;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
+use Request;
 use Vdlp\Maintenance\Classes\Contracts\ResponseMaker;
 use Vdlp\Maintenance\Classes\MaintenanceResponder;
 
@@ -30,7 +32,9 @@ final class MaintenanceServiceProvider extends ServiceProvider
     private function registerMaintenanceHandler(): void
     {
         $this->app->booting(static function (Application $app): void {
-            if ($app->isDownForMaintenance() && !$app->runningInConsole()) {
+            $whitelist = explode(',', Config::get('vdlp_maintenance.whitelisted_ips', ''));
+            $whitelisted = in_array(Request::ip(), $whitelist, true);
+            if ($app->isDownForMaintenance() && !$app->runningInConsole() && !$whitelisted) {
                 /** @var ResponseMaker $responder */
                 $responder = $app->make(ResponseMaker::class);
                 $responder->getResponse()->send();
