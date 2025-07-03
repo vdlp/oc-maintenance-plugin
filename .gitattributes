@@ -1,7 +1,8 @@
-#
-# Exclude files from exporting
-#
+# Path-based git attributes
+# https://www.kernel.org/pub/software/scm/git/docs/gitattributes.html
 
-/.gitattributes     export-ignore
-/.github            export-ignore
-/.gitignore         export-ignore
+# Ignore all test and documentation with "export-ignore".
+/.gitattributes              export-ignore
+/.github                     export-ignore
+/.gitignore                  export-ignore
+/.idea                       export-ignore
