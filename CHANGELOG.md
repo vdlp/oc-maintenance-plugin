@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Added support for OctoberCMS 4.x
+- Added configuration to customize the HTTP response status code
 
 ## [2.2.1] - 2023-06-12
 
